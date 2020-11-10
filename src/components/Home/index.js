@@ -56,7 +56,7 @@ const Home =()=> {
                 className="flex-center flex-row blue-grey-text text-left"
               >
                 <MDBCol md="12" lg="6" style={{ alignContent: "start" }}>
-                  <HomeImage className="img-fluid" style={{ "margin-left":"10rem", float:"right", width: "650px" }} />
+                  <HomeImage className="img-fluid" style={{ "marginLeft":"10rem", float:"right", width: "650px" }} />
                 </MDBCol>
               </MDBMask>
             </MDBRow>

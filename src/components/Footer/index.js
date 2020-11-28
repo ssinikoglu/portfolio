@@ -1,17 +1,20 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
+import { MDBContainer, MDBFooter} from "mdbreact";
 
-const FooterPage = () => {
+const Footer = () => {
   return (
-    <MDBFooter color="transparent" className="font-small pt-4 mt-4">
-      <div className="footer-copyright black-text text-center py-3">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="#" className="black-text"> Sule Sinikoglu </a>
-        </MDBContainer>
-      </div>
-    </MDBFooter>
+      <MDBFooter className="transparent font-small">
+        <div className="footer-copyright black-text text-center py-3">
+          <MDBContainer>
+          &copy; {new Date().getFullYear()} Copyright:
+
+            <a href="#!" className="black-text ml-1">
+              Sule Sinikoglu
+            </a>
+          </MDBContainer>
+        </div>
+      </MDBFooter>
   );
 };
 
-export default FooterPage;
+export default Footer;

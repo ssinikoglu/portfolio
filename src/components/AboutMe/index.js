@@ -35,10 +35,11 @@ const AboutMe = () => {
                 </p>
                 <div className="text-center mt-5">
                   <a
-                    href="https://cutt.ly/0hjT6a8"
+                    href="https://drive.google.com/file/d/1n7462cZbB-QYXdC9Nt2M6_Qj9STs9uMP/view?usp=sharing"
                     target="_blank"
                     download
                     className="downloadLink"
+                    rel="noreferrer"
                   >
                     <b>RESUME</b>
 

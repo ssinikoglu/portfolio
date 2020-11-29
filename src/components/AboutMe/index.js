@@ -4,7 +4,7 @@ import "mdbreact/dist/css/mdb.css";
 import "./index.css";
 import { MDBIcon, MDBMask, MDBRow, MDBCol, MDBContainer } from "mdbreact";
 import { ReactComponent as AboutMeImage } from "../../images/about.svg";
-import Resume from "../../SuleSinikoglu_resume.pdf";
+
 
 const AboutMe = () => {
   return (
@@ -35,7 +35,7 @@ const AboutMe = () => {
                 </p>
                 <div className="text-center mt-5">
                   <a
-                    href={Resume}
+                    href="https://cutt.ly/0hjT6a8"
                     target="_blank"
                     download
                     className="downloadLink"

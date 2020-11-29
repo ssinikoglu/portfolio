@@ -1,6 +1,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import "./index.css";
 import {
   MDBBtn,
   MDBIcon,
@@ -10,6 +11,7 @@ import {
   MDBContainer,
 } from "mdbreact";
 import { ReactComponent as AboutMeImage } from "../../images/about.svg";
+import Resume from "../../SuleSinikoglu_resume.pdf";
 
 const AboutMe = () => {
   return (
@@ -38,22 +40,21 @@ const AboutMe = () => {
                   has become a milestone for me. I'm continuing on this long
                   journey by taking sustainable steps.
                 </p>
-                <div className="text-center mt-3">
-                  <MDBBtn
-                    color="black font-weight-bold"
-                    className="waves-effect"
-                    outline
-                    aria-hidden="true"
+                <div className="text-center mt-5">
+                  <a
+                    to={Resume}
+                    target="_blank"
+                    download
+                    className="downloadLink"
                   >
-                    RESUME
-                    <span>
-                      <MDBIcon
-                        icon="fas fa-file-download"
-                        className="ml-3"
-                        size="3x"
-                      />
-                    </span>
-                  </MDBBtn>
+                    <b>RESUME</b>
+
+                    <MDBIcon
+                      icon="fas fa-file-download"
+                      className="ml-3"
+                      size="1x"
+                    />
+                  </a>
                 </div>
               </MDBCol>
             </MDBCol>

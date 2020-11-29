@@ -18,7 +18,7 @@ const Projects = () => {
                     <img
                       className="card-img-top"
                       src={project.picture}
-                      alt="Project image"
+                      alt="Project"
                     />
                     <a href="#!">
                       <div className="mask rgba-white-slight" />

@@ -2,14 +2,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import "./index.css";
-import {
-  MDBBtn,
-  MDBIcon,
-  MDBMask,
-  MDBRow,
-  MDBCol,
-  MDBContainer,
-} from "mdbreact";
+import { MDBIcon, MDBMask, MDBRow, MDBCol, MDBContainer } from "mdbreact";
 import { ReactComponent as AboutMeImage } from "../../images/about.svg";
 import Resume from "../../SuleSinikoglu_resume.pdf";
 
@@ -42,7 +35,7 @@ const AboutMe = () => {
                 </p>
                 <div className="text-center mt-5">
                   <a
-                    to={Resume}
+                    href={Resume}
                     target="_blank"
                     download
                     className="downloadLink"

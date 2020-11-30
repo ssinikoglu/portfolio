@@ -1,14 +1,56 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   MDBMask,
   MDBContainer,
   MDBRow,
   MDBCol,
   MDBBtn,
-  MDBIcon,
+  MDBIcon
 } from "mdbreact";
 import { ReactComponent as ContactImage } from "../../images/contact.svg";
+
+// Converts object to proper form data(string)
+const encodeFormData = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 const Contact = () => {
+  const [formValue, setFormValue] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  // The change in isLoading state triggers SyncOutlined icon spinning
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    setIsLoading(true);
+    e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      "data-netlify": "true",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodeFormData({ "form-name": "contact", ...formValue }),
+    })
+      .then(() => {
+        setIsLoading(false);
+        alert("Thanks for messaging!");
+        setFormValue({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => alert(error));
+  };
+
   return (
     <>
       <MDBContainer>
@@ -19,7 +61,7 @@ const Contact = () => {
           >
             <MDBCol>
               <MDBCol md="10" className="ml-5">
-                <form className="needs-validation" novalidate>
+                <form className="needs-validation" onSubmit={handleSubmit}>
                   <p className="h4 text-center mb-4">Keep in touch</p>
                   <label
                     htmlFor="validationCustom01"
@@ -31,6 +73,9 @@ const Contact = () => {
                     type="text"
                     id="validationCustom01"
                     className="form-control"
+                    name="name"
+                    value={formValue.name}
+                    onChange={handleChange}
                     required
                   />
                   <br />
@@ -44,6 +89,9 @@ const Contact = () => {
                     type="email"
                     id="defaultFormContactEmailEx"
                     className="form-control"
+                    value={formValue.email}
+                    onChange={handleChange}
+                    name="email"
                     required
                   />
                   <br />
@@ -56,13 +104,15 @@ const Contact = () => {
                   <input
                     type="text"
                     id="defaultFormContactSubjectEx"
-                    className="form-control font-weight-bold"
+                    className="form-control"
+                    value={formValue.subject}
+                    onChange={handleChange}
+                    name="subject"
                   />
                   <br />
                   <label
                     htmlFor="defaultFormContactMessageEx"
                     className="black-text font-weight-bold"
-                    required
                   >
                     Message
                   </label>
@@ -71,6 +121,10 @@ const Contact = () => {
                     id="defaultFormContactMessageEx"
                     className="form-control"
                     rows="3"
+                    name="message"
+                    value={formValue.message}
+                    onChange={handleChange}
+                    required
                   />
                   <div className="text-center mt-4">
                     <MDBBtn

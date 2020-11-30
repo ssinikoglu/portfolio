@@ -8,6 +8,8 @@ import {
   MDBNavbarToggler,
   MDBIcon,
 } from "mdbreact";
+import "./index.css";
+
 class Navbar extends Component {
   state = {
     isOpen: false,
@@ -33,7 +35,7 @@ class Navbar extends Component {
             <MDBNavItem active>
               <MDBNavLink to="/">
                 <strong
-                  className="black-text pr-4 waves-effect"
+                  className="black-text text-md pr-4 waves-effect navbar-items"
                   aria-hidden="true"
                 >
                   Home
@@ -42,17 +44,23 @@ class Navbar extends Component {
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/about">
-                <b className="black-text pr-4 waves-effect">About</b>
+                <b className="black-text pr-4 waves-effect navbar-items">
+                  About
+                </b>
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/projects">
-                <b className="black-text pr-4 waves-effect">Projects</b>
+                <b className="black-text pr-4 waves-effect navbar-items">
+                  Projects
+                </b>
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink to="/contact">
-                <b className="black-text pr-4 waves-effect">Contact</b>
+                <b className="black-text pr-4 waves-effect navbar-items">
+                  Contact
+                </b>
               </MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>

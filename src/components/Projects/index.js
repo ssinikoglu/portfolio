@@ -19,6 +19,7 @@ const Projects = () => {
                       className="card-img-top"
                       src={project.picture}
                       alt="Project"
+                      width="100%"
                     />
                     <a href="#!">
                       <div className="mask rgba-white-slight" />

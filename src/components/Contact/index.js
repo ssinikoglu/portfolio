@@ -24,13 +24,9 @@ const Contact = () => {
     message: "",
   });
 
-  // The change in isLoading state triggers SyncOutlined icon spinning
-  const [isLoading, setIsLoading] = useState(false);
-
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
-    setIsLoading(true);
     e.preventDefault();
     fetch("/", {
       method: "POST",
@@ -39,7 +35,6 @@ const Contact = () => {
       body: encodeFormData({ "form-name": "contact", ...formValue }),
     })
       .then(() => {
-        setIsLoading(false);
         alert("Thanks for messaging!");
         setFormValue({
           name: "",

@@ -1,3 +1,11 @@
+.aboutMeTitle{
+font-size:2rem;
+}
+
+.aboutMeText{
+	font-size:1.25rem
+}
+
 .downloadLink{
 	box-sizing: border-box;
 	border:1px solid black;

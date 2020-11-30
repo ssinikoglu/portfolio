@@ -1,5 +1,17 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBIcon, MDBMask } from "mdbreact";
+import {
+  MDBContainer,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText,
+  MDBRow,
+  MDBCol,
+  MDBView,
+  MDBIcon,
+  MDBMask,
+} from "mdbreact";
 import data from "../data.js";
 
 const Projects = () => {
@@ -13,25 +25,31 @@ const Projects = () => {
           <div className="card-deck mr-5 ml-5 mt-5">
             {data.map((project) => {
               return (
-                <div className="card mb-4">
-                  <div className="view overlay">
-                    <img
-                      className="card-img-top"
-                      src={project.picture}
-                      alt="Project"
-                      width="100%"
-                    />
-                    <a href="#!">
-                      <div className="mask rgba-white-slight" />
-                    </a>
-                    <div className="card-body">
-                      <h4 className="card-title text-center">{project.name}</h4>
-                      <p className="card-text mt-2 ml-2">{project.desc}</p>
-                      <p className="card-text mt-2 ml-2">
+                <MDBCol md="4">
+                  <MDBCard wide>
+                    <MDBView>
+                      <MDBCardImage
+                        hover
+                        overlay="black-slight"
+                        className="card-img-top"
+                        src={project.picture}
+                        alt="Project"
+                        width="100%"
+                      />
+                    </MDBView>
+
+                    <MDBCardBody className="text-center">
+                      <MDBCardTitle className="card-title text-center">
+                        <strong>{project.name}</strong>
+                      </MDBCardTitle>
+                      <MDBCardText className="card-text mt-2 ml-2">
+                        {project.desc}
+                      </MDBCardText>
+                      <MDBCardText>
                         <b>Technologies: </b>
                         {project.tech}
-                      </p>
-                      <div className="text-center mt-2 flex-end">
+                      </MDBCardText>
+                      <MDBCol md="12" className="d-flex justify-content-center">
                         <a
                           className="btn-floating github-ic mr-3 waves-effect"
                           href={project.github}
@@ -56,10 +74,10 @@ const Projects = () => {
                             size="2x"
                           />
                         </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                      </MDBCol>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
               );
             })}
             ;

@@ -11,7 +11,7 @@ const Home = () => {
             overlay="black"
             className="flex-center flex-row black-text text-left"
           >
-            <MDBCol className="ml-5">
+            <MDBCol md="5" className="ml-4">
               <div>
                 <h1>
                   <strong>Sule Sinikoglu</strong>
@@ -49,7 +49,7 @@ const Home = () => {
                 </a>
               </div>
             </MDBCol>
-            <MDBCol >
+            <MDBCol>
               <HomeImage
                 className="img-fluid"
                 style={{

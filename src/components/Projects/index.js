@@ -10,7 +10,7 @@ const Projects = () => {
           overlay="black"
           className="flex-center flex-row black-text text-left"
         >
-          <div className="card-deck mr-5 ml-5">
+          <div className="card-deck mr-5 ml-5 mt-5">
             {data.map((project) => {
               return (
                 <div className="card mb-4">

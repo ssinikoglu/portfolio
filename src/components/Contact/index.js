@@ -77,7 +77,7 @@ const Contact = () => {
                       color="black font-weight-bold"
                       outline
                       type="submit"
-                      className="waves-effect"
+                      className="btn-block waves-effect"
                       aria-hidden="true"
                     >
                       Send
@@ -89,7 +89,7 @@ const Contact = () => {
             </MDBCol>
             <MDBCol>
               <ContactImage
-                className="img-fluid"
+                className="img-fluid mb-5"
                 style={{
                   float: "right",
                   width: "100%",

@@ -20,7 +20,7 @@ const projects = [
     github:
       "https://github.com/ibrahimaljarad/bootcamp-istanbul-jul2020/tree/master/movieproject/ibrahim-sule",
     picture: backtothemovies,
-    demo: "#",
+    demo: "#!",
   },
   {
     name: "Portfolio",

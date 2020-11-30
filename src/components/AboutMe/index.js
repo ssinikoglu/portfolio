@@ -57,7 +57,7 @@ const AboutMe = () => {
                 className="img-fluid"
                 style={{
                   float: "right",
-                  width: "500px",
+                  width: "100%",
                 }}
               />
             </MDBCol>

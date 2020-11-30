@@ -18,7 +18,7 @@ const Contact = () => {
             className="flex-center flex-row black-text text-left"
           >
             <MDBCol>
-              <MDBCol md="8" className="ml-5">
+              <MDBCol md="10" className="ml-5">
                 <form className="needs-validation" novalidate>
                   <p className="h4 text-center mb-4">Keep in touch</p>
                   <label
@@ -72,7 +72,7 @@ const Contact = () => {
                     className="form-control"
                     rows="3"
                   />
-                  <div className="text-left mt-4">
+                  <div className="text-center mt-4">
                     <MDBBtn
                       color="black font-weight-bold"
                       outline
@@ -92,7 +92,7 @@ const Contact = () => {
                 className="img-fluid"
                 style={{
                   float: "right",
-                  width: "500px",
+                  width: "100%",
                 }}
               />
             </MDBCol>

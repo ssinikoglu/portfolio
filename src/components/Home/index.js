@@ -49,12 +49,12 @@ const Home = () => {
                 </a>
               </div>
             </MDBCol>
-            <MDBCol md="8" lg="6">
+            <MDBCol >
               <HomeImage
                 className="img-fluid"
                 style={{
                   float: "right",
-                  width: "650px",
+                  width: "100%",
                 }}
               />
             </MDBCol>

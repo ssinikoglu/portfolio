@@ -8,6 +8,7 @@ import {
   MDBIcon
 } from "mdbreact";
 import { ReactComponent as ContactImage } from "../../images/contact.svg";
+import "./index.css";
 
 // Converts object to proper form data(string)
 const encodeFormData = (data) => {
@@ -57,12 +58,14 @@ const Contact = () => {
             <MDBCol>
               <MDBCol md="10" className="ml-5">
                 <form className="needs-validation" onSubmit={handleSubmit}>
-                  <p className="h4 text-center mb-4">Keep in touch</p>
+                  <h2 className="h4 text-center mb-4 contactForm__title">
+                    <strong>Keep in touch</strong>
+                  </h2>
                   <label
                     htmlFor="validationCustom01"
-                    className="black-text font-weight-bold"
+                    className="black-text font-weight-bold contactForm__label"
                   >
-                    Name
+                    Name:
                   </label>
                   <input
                     type="text"
@@ -76,9 +79,9 @@ const Contact = () => {
                   <br />
                   <label
                     htmlFor="defaultFormContactEmailEx"
-                    className="black-text font-weight-bold"
+                    className="black-text font-weight-bold contactForm__label"
                   >
-                    E-mail
+                    E-mail:
                   </label>
                   <input
                     type="email"
@@ -92,9 +95,9 @@ const Contact = () => {
                   <br />
                   <label
                     htmlFor="defaultFormContactSubjectEx"
-                    className="black-text font-weight-bold"
+                    className="black-text font-weight-bold contactForm__label"
                   >
-                    Subject
+                    Subject:
                   </label>
                   <input
                     type="text"
@@ -107,9 +110,9 @@ const Contact = () => {
                   <br />
                   <label
                     htmlFor="defaultFormContactMessageEx"
-                    className="black-text font-weight-bold"
+                    className="black-text font-weight-bold contactForm__label"
                   >
-                    Message
+                    Message:
                   </label>
                   <textarea
                     type="text"
@@ -121,12 +124,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
-                  <div className="text-center mt-4">
+                  <div className="text-center mt-5">
                     <MDBBtn
                       color="black font-weight-bold"
                       outline
                       type="submit"
-                      className="btn-block waves-effect"
+                      className="btn-block waves-effect contactForm__button"
                       aria-hidden="true"
                     >
                       Send

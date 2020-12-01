@@ -126,7 +126,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
-                  <div className="text-center mt-5">
+                  <div className="text-center mt-4">
                     <MDBBtn
                       color="black font-weight-bold"
                       outline

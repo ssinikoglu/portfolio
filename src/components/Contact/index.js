@@ -119,7 +119,7 @@ const Contact = () => {
                   <textarea
                     type="text"
                     id="defaultFormContactMessageEx"
-                    className="form-control"
+                    className="form-control mb-1"
                     rows="3"
                     name="message"
                     value={formValue.message}

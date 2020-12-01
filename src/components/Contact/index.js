@@ -59,7 +59,9 @@ const Contact = () => {
               <MDBCol md="10" className="ml-5">
                 <form className="needs-validation" onSubmit={handleSubmit}>
                   <h2 className="h4 text-center mb-4 contactForm__title">
-                    <strong>Keep in touch</strong>
+                    <strong>
+                      <b>Keep in touch</b>
+                    </strong>
                   </h2>
                   <label
                     htmlFor="validationCustom01"

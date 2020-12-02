@@ -11,7 +11,7 @@ import { ReactComponent as ContactImage } from "../../images/contact.svg";
 import "./index.css";
 
 // Converts object to proper form data(string)
-const encodeFormData = (data) => {
+const encode = (data) => {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
@@ -28,12 +28,12 @@ const Contact = () => {
   const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+
     fetch("/", {
       method: "POST",
       "data-netlify": "true",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeFormData({ "form-name": "contact", ...formValue }),
+      body: encode({ "form-name": "contact", ...formValue }),
     })
       .then(() => {
         alert("Thanks for messaging!");
@@ -45,6 +45,8 @@ const Contact = () => {
         });
       })
       .catch((error) => alert(error));
+
+     e.preventDefault();
   };
 
   return (
@@ -57,7 +59,7 @@ const Contact = () => {
           >
             <MDBCol>
               <MDBCol md="10" className="ml-5">
-                <form className="needs-validation" onSubmit={handleSubmit}>
+                <form className="needs-validation" onSubmit={handleSubmit} netlify>
                   <h2 className="h4 text-center mb-4 contactForm__title">
                     <strong>
                       <b>Keep in touch</b>

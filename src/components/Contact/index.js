@@ -59,7 +59,15 @@ const Contact = () => {
           >
             <MDBCol>
               <MDBCol md="10" className="ml-5">
-                <form className="needs-validation" onSubmit={handleSubmit} netlify>
+                <form
+                  className="needs-validation"
+                  onSubmit={handleSubmit}
+                  name="contact"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                   <h2 className="h4 text-center mb-4 contactForm__title">
                     <strong>
                       <b>Keep in touch</b>

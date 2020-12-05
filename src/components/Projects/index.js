@@ -49,7 +49,7 @@ const Projects = () => {
                         <b>Technologies: </b>
                         {project.tech}
                       </MDBCardText>
-                      <MDBCol md="12" className="d-flex justify-content-center">
+                      <MDBCol md="12" className="d-flex justify-content-center pt-3">
                         <a
                           className="btn-floating github-ic mr-3 waves-effect"
                           href={project.github}

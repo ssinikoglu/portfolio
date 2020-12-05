@@ -1,0 +1,29 @@
+.homePage{
+  display: flex;
+  flex-direction: column;
+}
+
+.homePage__textCol{
+  margin: auto 2%;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.homePage__illustrationCol--homePageImage{
+ 	float:right;
+	width: 100%;
+}
+
+@media (max-width: 426px){
+.homePage__textCol{
+	margin-left: 3%;
+    margin-right: 3%;
+    flex-direction: column;
+    width: 94%;
+}
+.homePage__illustrationCol--homePageImage{
+height: 400px;
+    width: auto;
+}
+}

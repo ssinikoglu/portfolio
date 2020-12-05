@@ -1,28 +1,26 @@
 import React from "react";
 import { MDBMask, MDBIcon, MDBRow, MDBCol, MDBContainer } from "mdbreact";
 import { ReactComponent as HomeImage } from "../../images/home.svg";
+import "./index.css";
 
 const Home = () => {
   return (
-    <>
-      <MDBContainer>
+      <MDBContainer className="homePage">
         <MDBRow>
           <MDBMask
             overlay="black"
             className="flex-center flex-row black-text text-left"
           >
-            <MDBCol md="5" className="ml-4">
-              <div>
-                <h1>
-                  <strong>Sule Sinikoglu</strong>
-                </h1>
-                <h2>FRONT END WEB DEVELOPER</h2>
-                <h3>Based in Istanbul</h3>
-                <h4>ssinikoglu@gmail.com</h4>
-              </div>
+            <MDBCol className="homePage__textCol">
+              <h1>
+                <strong>Sule Sinikoglu</strong>
+              </h1>
+              <h2>FRONT END WEB DEVELOPER</h2>
+              <h3>Based in Istanbul</h3>
+              <h4>ssinikoglu@gmail.com</h4>
               <div>
                 <a
-                  className="btn-floating github-ic mr-3"
+                  className="btn-floating github-ic"
                   href="https://github.com/ssinikoglu"
                   target="_blank"
                   rel="noreferrer"
@@ -49,19 +47,12 @@ const Home = () => {
                 </a>
               </div>
             </MDBCol>
-            <MDBCol>
-              <HomeImage
-                className="img-fluid"
-                style={{
-                  float: "right",
-                  width: "100%",
-                }}
-              />
+            <MDBCol className="homePage__illustrationCol">
+              <HomeImage className="homePage__illustrationCol--homePageImage" />
             </MDBCol>
           </MDBMask>
         </MDBRow>
       </MDBContainer>
-    </>
   );
 };
 

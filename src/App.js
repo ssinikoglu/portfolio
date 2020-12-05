@@ -4,7 +4,6 @@ import HomePage from "./containers/HomePage";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import AboutPage from "./containers/AboutPage";
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { MDBView } from "mdbreact";
 import backgroundImage from "./images/backgroundImage.jpeg";
@@ -20,7 +19,6 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/projects" component={Projects} />
       </MDBView>
-      <Footer />
     </Router>
   );
 }

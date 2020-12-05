@@ -130,14 +130,15 @@ const Contact = () => {
                   <textarea
                     type="text"
                     id="defaultFormContactMessageEx"
-                    className="form-control mb-1"
+                    className="form-control"
                     rows="3"
                     name="message"
                     value={formValue.message}
                     onChange={handleChange}
                     required
                   />
-                  <div className="text-center mt-4">
+                  <br />
+                  <div className="text-center mt-2">
                     <MDBBtn
                       color="black font-weight-bold"
                       outline
@@ -154,7 +155,7 @@ const Contact = () => {
             </MDBCol>
             <MDBCol>
               <ContactImage
-                className="img-fluid mb-5"
+                className="img-fluid mt-3 mb-5"
                 style={{
                   float: "right",
                   width: "100%",

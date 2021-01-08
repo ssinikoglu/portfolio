@@ -39,7 +39,7 @@ const AboutMe = () => {
                 </div>
                 <div className="text-center mt-5">
                   <a
-                    href="https://drive.google.com/file/d/1n7462cZbB-QYXdC9Nt2M6_Qj9STs9uMP/view?usp=sharing"
+                    href="https://drive.google.com/file/d/10vV58OtDcJF1J2lxSotvEs4CnHDSk2fD/view?usp=sharing"
                     target="_blank"
                     download
                     className="downloadLink"

@@ -54,7 +54,7 @@ const Contact = () => {
       <MDBContainer>
         <MDBRow>
           <MDBMask
-            overlay="black"
+            overlay="grey-light"
             className="flex-center flex-row black-text text-left"
           >
             <MDBCol>

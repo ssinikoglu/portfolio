@@ -13,7 +13,7 @@ function App() {
   return (
     <Router className="App">
       <Route path="/" component={Navbar} />
-      <MDBView src={backgroundImage}>
+      <MDBView src={backgroundImage} className="img-fluid">
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/contact" component={Contact} />

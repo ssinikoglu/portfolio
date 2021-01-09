@@ -10,7 +10,7 @@ import {
   MDBCol,
   MDBView,
   MDBIcon,
-  MDBMask,
+  MDBMask
 } from "mdbreact";
 import data from "../data.js";
 
@@ -19,7 +19,7 @@ const Projects = () => {
     <MDBContainer>
       <MDBRow>
         <MDBMask
-          overlay="black"
+          overlay="grey-light"
           className="flex-center flex-row black-text text-left"
         >
           <div className="card-deck mr-5 ml-5 mt-5">

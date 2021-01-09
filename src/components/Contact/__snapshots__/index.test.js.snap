@@ -10,7 +10,7 @@ exports[`Contact snapshot test  1`] = `
     data-test="row"
   >
     <div
-      className="mask rgba-black flex-center flex-row black-text text-left"
+      className="mask rgba-grey-light flex-center flex-row black-text text-left"
       data-test="mask"
     >
       <div
@@ -98,7 +98,7 @@ exports[`Contact snapshot test  1`] = `
               Message:
             </label>
             <textarea
-              className="form-control mb-1"
+              className="form-control"
               id="defaultFormContactMessageEx"
               name="message"
               onChange={[Function]}
@@ -107,8 +107,9 @@ exports[`Contact snapshot test  1`] = `
               type="text"
               value=""
             />
+            <br />
             <div
-              className="text-center mt-4"
+              className="text-center mt-2"
             >
               <button
                 aria-hidden="true"
@@ -145,7 +146,7 @@ exports[`Contact snapshot test  1`] = `
         data-test="col"
       >
         <svg
-          className="img-fluid mb-5"
+          className="img-fluid mt-3 mb-5"
           style={
             Object {
               "float": "right",

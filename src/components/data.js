@@ -10,7 +10,7 @@ const projects = [
     tech: "React, Ant Design, Firebase, i18next, Jest",
     github: "https://github.com/ssinikoglu/capstone-istanbul-juniper",
     picture: juniper,
-    demo: "https://juniper-ist.netlify.app/",
+    demo: "https://capstone-project-juniper.netlify.app/",
   },
   {
     name: "Back to the Movies",

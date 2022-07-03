@@ -26,16 +26,18 @@ const Projects = () => {
             {data.map((project) => {
               return (
                 <MDBCol md="4">
-                  <MDBCard wide>
+                  <MDBCard wide className="h-100">
                     <MDBView>
-                      <MDBCardImage
-                        hover
-                        overlay="black-slight"
-                        className="card-img-top"
-                        src={project.picture}
-                        alt="Project"
-                        width="100%"
-                      />
+                      <a rel="noreferrer" href={project.demo} target="_blank">
+                        <MDBCardImage
+                          hover
+                          overlay="black-slight"
+                          className="card-img-top"
+                          src={project.picture}
+                          alt="Project"
+                          width="100%"
+                          onClick={project.demo} />
+                      </a>
                     </MDBView>
 
                     <MDBCardBody className="text-center">
@@ -60,7 +62,7 @@ const Projects = () => {
                             fab
                             icon="github"
                             size="2x"
-                            className="black-text pr-3"
+                            className="black-text pr-3 hover-icon"
                           />
                         </a>
                         <a

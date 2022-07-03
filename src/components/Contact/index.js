@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   MDBMask,
   MDBContainer,
@@ -46,7 +46,7 @@ const Contact = () => {
       })
       .catch((error) => alert(error));
 
-     e.preventDefault();
+    e.preventDefault();
   };
 
   return (
@@ -69,7 +69,7 @@ const Contact = () => {
                   netlify
                 >
                   <input type="hidden" name="form-name" value="contact" />
-                  <h2 className="h4 text-center mb-4 contactForm__title">
+                  <h2 className="text-center mb-4 contactForm__title">
                     <strong>
                       <b>Keep in touch</b>
                     </strong>
@@ -131,7 +131,7 @@ const Contact = () => {
                     type="text"
                     id="defaultFormContactMessageEx"
                     className="form-control"
-                    rows="3"
+                    rows="4"
                     name="message"
                     value={formValue.message}
                     onChange={handleChange}

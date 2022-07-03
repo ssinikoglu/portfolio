@@ -29,7 +29,12 @@ class Navbar extends Component {
         scrolling
         transparent
       >
-        <MDBNavbarToggler onClick={this.toggleCollapse} className="black" />
+        <MDBNavbarToggler onClick={this.toggleCollapse} className="transparent"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation" />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
             <MDBNavItem active>

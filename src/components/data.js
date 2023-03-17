@@ -1,6 +1,6 @@
 import juniper from "../images/juniper.png";
 import backtothemovies from "../images/backtothemovies.png";
-import portfolio from "../images/portfolio.png";
+import nttdataproject from "../images/nttdataproject.png";
 
 const projects = [
   {
@@ -23,13 +23,13 @@ const projects = [
     demo: "https://backtothemovies.netlify.app/",
   },
   {
-    name: "Portfolio",
-    desc: "Portfolio consists of my work experience and projects so far.",
-    tech: "React, React-Router, Material Design Bootstrap",
+    name: "NTT DATA Project",
+    desc: "This project is an implementation of e-commerce web site design. Includes product list, add to favourites, filter, and responsive design.",
+    tech: "React, Material Design, Tailwind CSS, Redux",
     github:
-      "https://github.com/ssinikoglu/bootcamp-istanbul-jul2020/tree/master/madlibz/Sule-Zeynep",
-    picture: portfolio,
-    demo: "https://sule-sinikoglu.netlify.app/"
+      "https://github.com/ssinikoglu/ntt-data-project",
+    picture: nttdataproject,
+    demo: "https://ntt-data-project.netlify.app/"
   },
 ];
 
